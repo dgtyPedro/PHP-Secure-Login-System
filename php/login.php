@@ -20,6 +20,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 			?>
 			<script>
 			javascript:alert('Logado!');
+			javascript:window.location='../session.php';
 			</script>
 			<?php
 
@@ -29,6 +30,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 			?>
 			<script>
 			javascript:alert('Senha errada!');
+			javascript:window.location='../login.html';
 			</script>
 			<?php
 		}
@@ -37,6 +39,7 @@ if ($stmt = $conn->prepare('SELECT id, password FROM users WHERE email = ?')) {
 		?>
 		<script>
 		javascript:alert('Email errado!');
+		javascript:window.location='../login.html';
 		</script>
 		<?php
 	}
